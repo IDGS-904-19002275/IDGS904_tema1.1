@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Vista";
+}
+
+<h2>Suma de dos numeros</h2>
+
+<form action="/" method="post">
+    <label for="n1">Numero 1</label>
+    <input type="text" name="n1" value="" />
+    <br />
+    <label for="n2">Numero 2</label>
+    <input type="text" name="n2" value="" />
+    <br />
+    <input type="submit" name="cal" value="calcular" />s
+</form>
+
+
+<h1> La suma es: @ViewBag.Res</h1>
+

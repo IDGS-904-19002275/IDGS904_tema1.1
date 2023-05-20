@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "LeerDatos";
+}
+
+<h2>LeerDatos</h2>
+
+@foreach (string tem in ViewBag.Archivo)
+{ 
+    <li>
+        <ul>
+            @foreach (string item in tem.Split(','))
+                {
+                    <li>item</li>
+                }
+            
+        </ul>
+    </li>
+}
+

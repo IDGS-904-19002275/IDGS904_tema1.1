@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+
+<h2>@ViewBag.Grupo</h2>
+
+<h2>@ViewBag.valor</h2>
+
+<h2>@ViewData["Materia"]</h2>
+
+@Html.ActionLink("Mi ruta", "Index", "Home", null,
+   new { dato="", @class="btn btn-danger"})

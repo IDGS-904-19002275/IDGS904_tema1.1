@@ -1,0 +1,40 @@
+﻿@model IDGS904_tema1._1.Models.CalcularDistancia
+@{
+    ViewBag.Title = "CalcularDistancia";
+}
+
+<h2>CalcularDistancia</h2>
+<div class="container">
+    <div class="row div col-lg-6">
+
+        <form action="/" method="post">
+            <h4>Coordenadas 1</h4>
+            <div class="w-25 d-inline-block p-2">
+                <label>X</label>
+                <input type="number" class="w-75" name="X1" value="" />
+            </div>
+            <div class="w-25 d-inline-block p-2">
+                <label>Y</label>
+                <input type="number" class="w-75" name="Y1" value="" />
+            </div>
+
+            <h4>Coordenadas 2</h4>
+            <div class="w-25 d-inline-block p-2">
+                <label>X</label>
+                <input type="number" class="w-75" name="X2" value="" />
+            </div>
+            <div class="w-25 d-inline-block p-2">
+                <label>Y</label>
+                <input type="number" class="w-75" name="Y2" value="" />
+            </div>
+
+            <hr />
+            <input type="submit" class="btn btn-primary" name="cal"
+                   value="Calcular Distancia" />
+        </form>
+    </div>
+
+    <div>
+        @ViewBag.Resultado
+    </div>
+</div>
