@@ -1,0 +1,55 @@
+﻿@model IDGS904_tema1._1.Models.Traductor
+
+@{
+    ViewBag.Title = "Traductor";
+}
+<a href="DiccionarioTabla">Ver Diccionario</a>
+
+@using (Html.BeginForm("TraductorGuardar", "Traductor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Traductor Guardar Palabra</h4>
+        <div class="form-group">
+            <label>Palabra en español</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ESP, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Palabra en ingles</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ING, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+            </div>
+        </div>
+        <input type="submit" value="Guardar" class="btn btn-default" />   
+    </div>
+}
+@using (Html.BeginForm("TraductorConsulta", "Traductor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>Traducir Palabra</h4>
+
+        <div class="form-group">
+            <label>Palabra a traducir</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PALABRA, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                @Html.ValidationMessageFor(model => model.PALABRA, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Seleccione idioma</label>
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.IDIOMA, "1")@Html.Label("Convertir al Español")
+                
+                @Html.RadioButtonFor(model => model.IDIOMA, "2")@Html.Label("Convertir al Ingles")
+                <br />
+            </div>
+        </div>
+        <input type="submit" value="Traducir" class="btn btn-default" />
+    </div>
+}

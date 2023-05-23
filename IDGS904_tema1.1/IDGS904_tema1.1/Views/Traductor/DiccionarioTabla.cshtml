@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "DiccionarioTabla";
+}
+<a href="TraductorGuardar">Atras</a>
+<h2>Diccionario Ingles-Español</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Español
+        </th>
+        <th>
+            Ingles
+        </th>
+    </tr>
+    @for (int i = 0; i < @ViewBag.ESP.Length; i++)
+    {
+        <tr>
+            <td>
+                @ViewBag.ESP.GetValue(i)
+            </td>
+            <td>
+                @ViewBag.ING.GetValue(i)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "TraductorConsulta";
+}
+
+<a href="DiccionarioTabla">Ver Diccionario</a>
+<a href="TraductorGuardar">Atras</a>
+<h2>
+    La palabra "@ViewBag.palabraOriginal" traducida a
+</h2>
+
+
+    @if (@ViewBag.idioma == 1)
+    {
+        <h2>Español</h2>
+    }
+    @if (@ViewBag.idioma == 2)
+    {
+        <h2>Ingles</h2>
+    }
+    <h2>es "@ViewBag.palabra"</h2>
+
+
