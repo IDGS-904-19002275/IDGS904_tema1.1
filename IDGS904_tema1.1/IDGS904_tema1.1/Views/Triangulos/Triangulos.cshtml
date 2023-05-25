@@ -1,0 +1,67 @@
+﻿@model IDGS904_tema1._1.Models.Triangulos
+@{
+    ViewBag.Title = "Triangulos";
+}
+
+<h2>Triangulos</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        
+        <div class="form-group">
+                @Html.LabelFor(model => model.X1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.X1, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                </div>
+            
+                @Html.LabelFor(model => model.Y1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Y1, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                </div>
+            
+        </div>
+        
+        <div class="form-group">
+            
+                @Html.LabelFor(model => model.X2, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.X2, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                </div>
+            
+            
+                @Html.LabelFor(model => model.Y2, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Y2, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                </div>
+            
+        </div>
+        
+        <div class="form-group">
+            
+                @Html.LabelFor(model => model.X3, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.X3, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                </div>
+            
+            
+                @Html.LabelFor(model => model.Y3, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Y3, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                </div>
+            
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset col-md-10">
+                <input type="submit" name="name" value="Enviar" />
+            </div>
+        </div>
+
+
+        <h2>El tipo de tringulo es: @ViewBag.Tipo</h2>
+        <h2>El área es de: @ViewBag.Area</h2>
+
+    </div>
+}
+
+
